@@ -1,0 +1,75 @@
+html{
+    background-color: black;
+    color: white;
+}
+
+#mainTitle{
+    text-align: center;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#carre{
+    margin-top: 150px;
+    background-color: #ff0000;
+    width: 500px;
+    height: 500px;
+}
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes sliding {
+    from{
+        -webkit-transform: translateX(-1800px);
+    }
+    to{
+        -webkit-transform: translateX(1800px);
+    }
+}
+
+@-webkit-keyframes rotateTranslate {
+    0%{
+        -webkit-transform: translateX(-1800px) rotate(0deg);
+    }
+    25%{
+        -webkit-transform: translateX(-900px) rotate(360deg);
+    }
+    50%{
+        -webkit-transform: translateX(0px) rotate(720deg);
+    }
+    75%{
+        -webkit-transform: translateX(900px) rotate(1080deg);
+    }
+    100%{
+        -webkit-transform: translateX(1800px) rotate(1440deg);
+    }
+}
+
+.rotating{
+    animation: 2s linear infinite rotating;
+}
+.slider{
+    animation: 3s linear infinite sliding;
+}
+.rotslate{
+    animation: 3s linear infinite rotateTranslate;
+}
+.divButton{
+    width: 520px;
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+#couleur{
+    height: 23px;
+    width: 70px
+}
